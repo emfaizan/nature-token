@@ -1,0 +1,421 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital@1&family=Montserrat:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- style -->
+  <link href="./css/aos.css" rel="stylesheet">
+
+  <!-- style -->
+  <link href="./dist/output.css" rel="stylesheet">
+
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+  <script>
+    $(document).ready(function() {  
+      $("#hamburger-menu").click(function(){
+        $("#mobile-menu").toggle();
+      });
+      $("#open-meet-the-team").click(function() {
+        $(".meet-the-team").toggle();
+        $("#open-meet-the-team").toggle();
+        $("#close-meet-the-team").toggle();
+      });
+      $("#close-meet-the-team").click(function() {
+        $(".meet-the-team").toggle();
+        $("#open-meet-the-team").toggle();
+        $('#close-meet-the-team').toggle();
+      });
+    });
+  </script>
+
+  <!-- This example requires Tailwind CSS v2.0+ -->
+  <nav class="absolute top-0 left-0 w-full z-30">
+    <div class="justify-between h-16 p-4 lg:p-10">
+      <div class="">
+        <img class="block float-left h-12 w-auto" src="images/logo.png" alt="Workflow">
+        <div class="
+          float-right
+          hidden md:block
+          sm:ml-6 sm:space-x-8">
+          <!-- Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
+          <a href="/" class="
+            pb-2
+            border-natures-vault-green text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"> Nature's Vault </a>
+          <a href="/the-legacy-token" class="
+            pb-2
+            text-white 
+            border-transparent hover:border-natures-vault-green/50
+            inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"> The Legacy Token </a>
+          <a href="/white-paper" class="
+            pb-2
+            text-white 
+            border-transparent hover:border-natures-vault-green/50
+            inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"> White Paper </a>
+          <a href="/join-whitelist" class="
+            pb-2
+            text-white 
+            border-transparent hover:border-natures-vault-green/50
+            inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"> Join Whitelist </a>
+        </div>
+      </div>
+      <div class="-mr-2 flex items-center md:hidden float-right">
+        <!-- Mobile menu button -->
+        <button id="hamburger-menu"" type="button" class="
+          inline-flex items-center justify-center p-2 rounded-md text-white ring-2 ring-white
+          hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <!--
+            Icon when menu is closed.
+
+            Heroicon name: outline/menu
+
+            Menu open: "hidden", Menu closed: "block"
+          -->
+          <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <!--
+            Icon when menu is open.
+
+            Heroicon name: outline/x
+
+            Menu open: "block", Menu closed: "hidden"
+          -->
+          <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="hidden shadow-lg opacity-95" id="mobile-menu">
+      <div class="pt-2 pb-3 space-y-1 bg-white">
+        <!-- Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
+        <a href="/" class="bg-indigo-50 border-natures-vault-green text-black block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Nature's Vault</a>
+        <a href="/the-legacy-token" class="border-transparent text-black hover:bg-gray-50 hover:border-natures-vault-green/50 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">The Legacy Token</a>
+        <a href="/white-paper" class="border-transparent text-black hover:bg-gray-50 hover:border-natures-vault-green/50 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">White Paper</a>
+        <a href="/join-whitelist" class="border-transparent text-black hover:bg-gray-50 hover:border-natures-vault-green/50 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Join Whitelist</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="h-screen md:min-h-[700px] sm:overflow-hidden bg-cover bg-no-repeat overflow-hidden relative pt-20 lg:pt-24" style="background-image:url(./images/privacy-policy-bg.png)">
+    
+    <div class="container flex items-center h-full relative z-10">
+      <div class="block relative text-center md:text-right text-white w-full px-4 md:px-10">
+        <div class="mb-4 lg:mb-6 text-xl md:text-[22px] lg:text-2xl">Protecting Your Security</div>
+        <div class="font-bold text-4xl md:text-5xl lg:text-6xl">Security<br>Transparency<br>Compliance</div>
+      </div>
+    </div>
+
+  </div>
+
+
+<main class="main-content overflow-x-hidden">
+
+  <!-- Introdution -->
+  <section class="py-20 md:py-40 text-center lg:text-left">
+    <div class="container">
+      <p class="text-xl lg:text-[22px]">Where You Are At</p>
+      <h3 class="font-bold text-3xl md:text-4xl xl:text-[42px] my-3 md:mt-5 lg:mt-7">DISCLAIMER AND FORWARD-LOOKING INFORMATION</h3>
+
+        
+      <div class="flex -mx-8 mt-20 lg:mt-32">
+        <div class="w-1/4 lg:px-8">
+          <ul class="divide-y divide-gray-500 border-t border-b border-gray-500">
+            <li class="py-7"><a href="./privacy-policy.html" class="text-xl lg:text-2xl font-medium">Privacy Policy</a></li>
+            <li class="py-7"><a href="./terms-of-use.html" class="text-xl lg:text-2xl font-medium">Terms of Use</a></li>
+            <li class="py-7"><a href="./disclaimer.html" class="text-xl lg:text-2xl font-bold">Disclaimer</a></li>
+            <li class="py-7"><a href="./cookie-policy.html" class="text-xl lg:text-2xl font-medium">Cookie Policy</a></li>
+          </ul>
+
+
+          <div class="relative hidden lg:block -ml-6 xl:-ml-8 mt-32">
+            <div class="mb-36">
+              <img src="./images/privacy-1.png" alt="">
+            </div>
+
+            <div class="mb-40">
+              <img src="./images/privacy-2.png" alt="">
+            </div>
+
+            <div class="mb-24">
+              <img src="./images/privacy-3.png" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="w-3/4 lg:px-8">
+          <p class="mb-5 text-base lg:text-lg lg:leading-normal font-medium">
+            The views presented on this website are for informational purposes only and this does not constitute or form part of any offer for purchase, sale, or subscription of, or solicitation or invitation of any offer to buy, sell, or to subscribe for, any securities nor may it or any part of it be relied on in connection with any contract or commitment whatsoever. If you do not have professional experience in matters relating to investments you should not act or rely on it. Nature’s Vault (Singapore) Pte. Ltd (“the Company”) is not advocating any of the courses of action presented in it, which are being presented solely to illustrate a range of available options. This  is confidential and is presented on the understanding that, apart from showing this  to those of your officers, employees, or advisers who are engaged in reviewing it on your behalf, its contents will not be reproduced, redistributed, or passed on, directly or indirectly, by you to any other person or published, in whole or in part, for any purpose without our written permission. The distribution of this material in other jurisdictions may be restricted by law, and persons into whose possession this  comes should inform themselves about, and observe, any such restrictions. By accepting this, you agree to be bound by the terms of this notice.
+          </p>   
+
+          <p class="mb-5 text-base lg:text-lg lg:leading-normal font-medium">
+            This website contains statements that are based on management’s current estimates, beliefs and assumptions, which are based on management’s perception of historic trends, current conditions and expected future developments, as well as other factors management believes are appropriate in the circumstances. This  has been prepared from information which is believed at the date of this  to be reliable and contains forward-looking information based on current expectations. Phrases like “expects,” “believes,” “anticipates,” “intend,” “may,” “plan,” “would,” “target” and similar phrases do not constitute warranties or guarantees of any kind, expressed or implied. Forward looking information may include, without limitation, statements regarding the operations, business, financial condition, expected financial results, performance, prospects, opportunities, priorities, targets, goals, ongoing objectives, milestones, strategies, and outlook of the Company and includes statements about, among other things, future developments, the future operations, future revenues, acquisition opportunities, strengths and strategy of the Company. These statements should not be read as guarantees of future performance or results. There is no guarantee that the Company will ever obtain carbon credits and subsequently that revenue will be generated from this.  There is no guarantee that any tokens will be sold, generating revenue from such sales, nor that they will be listed on an exchange. Further, if tokens are sold, there is no guarantee that they will be sold at the prices indicated in this website. These statements are based upon certain material factors, assumptions and analyses that were applied in drawing a conclusion or making a forecast or projection, including the Company’s experience and perceptions of historical trends, current conditions and expected future developments, as well as other factors that are believed to be reasonable in the circumstances. Persons reading this website are cautioned not to place undue reliance on forward-looking statements. The information in this website  is subject to change without notice. We undertake no responsibility or obligation to provide you with any additional information or to correct any inaccuracies in it that may become apparent, except as required by law. The information on this website must not be used as the basis for any prescribing decisions and may not represent the approved label in all territories. The Company’s affiliate and subsidiary companies expressly disclaim any and all liability for representations or warranties, expressed or implied, contained in, or for omissions from, this website or any written or oral communication concerning it or its subject matter transmitted or made available to any person.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  
+</main>
+
+  <!-- https://tailwindui.com/components/marketing/sections/newsletter-sections -->
+  <!-- newsletter -->
+  <div class="bg-white">
+    <div class="mx-auto max-w-md lg:px-60 sm:max-w-3xl lg:max-w-7xl">
+      <div class="relative rounded-2xl px-6 py-10 bg-cover overflow-hidden shadow-xl sm:py-20" style="background-image: url('images/signup-bg.jpg')">
+        <div class="relative mx-10">
+          <div class="sm:text-center text-white flex">
+            <div class="w-6 border-natures-vault-green border-y-4 border-l-4"></div>
+            <div class="grow py-4 align-middle inline">
+              <p class="mx-auto max-w-2xl text-lg">Sign Up For Our Newsletter</p>
+              <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Help Us Change the World</h2>
+            </div>
+            <div class="w-6 border-natures-vault-green border-y-4 border-r-4"></div>
+          </div>
+          <form action="#" class="mt-12">
+            <div class="w-full my-4">
+              <label for="cta-email" class="sr-only">Your Name</label>
+              <input id="cta-email" type="email" class="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600" placeholder="Your Name">
+            </div>
+            <div class=" my-4">
+              <label for="cta-email" class="sr-only">Your Email</label>
+              <input id="cta-email" type="email" class="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600" placeholder="Your Email">
+            </div>
+            <div class="w-full mt-4 py-2 sm:mt-0 sm:ml-3">
+              <button type="submit" class="block mx-auto rounded-full border border-transparent px-5 py-2 bg-gradient-to-r from-natures-vault-green to-natures-vault-blue text-base font-medium text-white shadow hover:bg-indigo-400 focus:outline-none focus:ring-white focus:ring-offset-2 sm:px-10">Join</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="text-white pt-60 md:pt-[525px] md:pb-6 -mt-40 md:-mt-80 bg-cover bg-center bg-no-repeat overflow-hidden" style="background-image: url('images/footer-bg.png')">
+    <div class="container">
+      <div class="flex flex-wrap -mx-5">
+        
+        <!-- Footer Column -->
+        <div class="w-full md:w-1/4 px-5 mb-16 md:mb-0">
+          <a href="Naturesvault.io" class="block mb-8 lg:mb-9">
+            <img src="./images/footer-logo.svg" alt="Nature's Vault">
+          </a>
+
+          <p class="text-[13px] md:text-sm md:leading-normal mb-3 md:mb-6">
+            We help investors meet the Environment, 
+            Social and Governance requirements by 
+            reducing a gold mine’s carbon footprint.
+          </p>
+
+          <p class="text-[13px] md:text-sm md:leading-normal mb-3 md:mb-6">
+            Our vision is to broaden accessibility 
+            and accelerate funding of impactful 
+            initiatives that tackle the challenges 
+            facing our planet. 
+          </p>
+
+          <a href="mailto:enter@naturesvault.io" class="text-[13px] md:text-sm font-bold">enter@naturesvault.io</a>
+        </div>
+
+        <!-- Footer Column -->
+        <div class="w-1/2 md:w-1/4 px-5">
+          <h4 class="text-xl lg:text-2xl font-bold mb-6 md:mb-[78px]">Useful Links</h4>
+
+          <ul>
+            <li><a href="www.undp.org" class="text-[13px] md:text-sm md:leading-normal font-medium">UNDP</a></li>
+            <li><a href="www.carbonmap.org" class="text-[13px] md:text-sm md:leading-normal font-medium">Carbon Mapping</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Column -->
+        <div class="w-1/2 md:w-1/4 px-5">
+          <h4 class="text-xl lg:text-2xl font-bold mb-6 md:mb-[78px]">Legal & Terms</h4>
+
+          <ul>
+            <li><a href="naturesvault.io/privacy-policy" class="text-[13px] md:text-sm md:leading-normal font-medium">Privacy Policy</a></li>
+            <li><a href="naturesvault.io/terms-of-use" class="text-[13px] md:text-sm md:leading-normal font-medium">Terms of Use</a></li>
+            <li><a href="naturesvault.io/disclaimer" class="text-[13px] md:text-sm md:leading-normal font-medium">Disclaimer</a></li>
+            <li><a href="naturesvault.io/cookie-policy" class="text-[13px] md:text-sm md:leading-normal font-medium">Cookie Policy</a></li>
+          </ul>
+        </div>
+        
+        <!-- Footer Column -->
+        <div class="w-full md:w-1/4 px-5 mt-16 md:mt-0">
+          <h4 class="text-xl lg:text-2xl font-bold mb-6 md:mb-[78px]">Our Community</h4>
+
+          <p class="text-[13px] md:text-sm font-bold">Stay in Touch</p>
+          <a href="mailto:enter@naturesvault.io" class="text-[13px] md:text-sm">enter@naturesvault.io</a>
+
+          <ul class="flex flex-wrap -mx-5 mt-2 md:max-w-xs">
+            
+            <li class="px-5 py-4">
+              <a href="https://twitter.com/natures_vault">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="27.618" viewBox="0 0 34 27.618">
+                  <path id="Twitter" d="M31.536,8.364A6.989,6.989,0,0,0,34.6,4.5,13.964,13.964,0,0,1,30.174,6.2,6.989,6.989,0,0,0,18.283,12.56,19.8,19.8,0,0,1,3.908,5.272a6.989,6.989,0,0,0,2.159,9.314,6.951,6.951,0,0,1-3.158-.874V13.8a6.979,6.979,0,0,0,5.6,6.84,6.991,6.991,0,0,1-3.15.12A6.989,6.989,0,0,0,11.87,25.6a14,14,0,0,1-8.663,2.986,14.16,14.16,0,0,1-1.666-.1,19.745,19.745,0,0,0,10.693,3.134A19.711,19.711,0,0,0,32.081,11.779q0-.453-.021-.9a14.171,14.171,0,0,0,3.482-3.612A13.944,13.944,0,0,1,31.536,8.364Z" transform="translate(-1.541 -4.009)" fill="#fff"/>
+                </svg>
+              </a>
+            </li>
+            
+            <li class="px-5 py-4 relative social-link-hasdd">
+              <a href="Javascript:void(0)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32.813" height="32.813" viewBox="0 0 32.813 32.813">
+                  <path id="Telegram" d="M34.813,18.406A16.406,16.406,0,1,1,18.406,2,16.406,16.406,0,0,1,34.813,18.406Zm-22.16-1.6c-1.651.715-3.348,1.45-4.9,2.3h0c-.81.588.267,1,1.277,1.4.161.062.319.124.469.185l.379.118c1.123.355,2.376.751,3.467.156,1.792-1.021,3.483-2.2,5.172-3.381.554-.387,1.107-.773,1.664-1.154l.088-.056c.474-.3,1.541-.991,1.146-.046-.933,1.012-1.932,1.909-2.937,2.81-.677.607-1.357,1.217-2.02,1.865-.578.466-1.178,1.4-.531,2.055,1.49,1.035,3,2.045,4.517,3.055l1.476.986a1.478,1.478,0,0,0,2.317-.9q.122-.711.245-1.422c.452-2.62.9-5.241,1.3-7.869.054-.412.116-.825.177-1.237a29.8,29.8,0,0,0,.345-3.006c-.12-1-1.346-.782-2.028-.557-3.507,1.324-6.978,2.746-10.436,4.193Q13.254,16.548,12.653,16.807Z" transform="translate(-2 -2)" fill="#fff" fill-rule="evenodd"/>
+                </svg>                
+              </a>
+
+              <div class="social-link-submenu">
+                <a rel="nofollow" href="#" target="_blank">API Telegram</a>
+                <a rel="nofollow" href="#" target="_blank">English Telegram</a>
+                <a rel="nofollow" href="#" target="_blank">Turkish Telegram</a>
+                <a rel="nofollow" href="#" target="_blank">Spanish Telegram</a>
+                <a rel="nofollow" href="#" target="_blank">Chinese Telegram</a>
+                <a rel="nofollow" href="#" target="_blank">Vietnamese Telegram</a>
+                <a rel="nofollow" href="#" target="_blank">Russian Telegram</a>
+                <a rel="nofollow" href="#" target="_blank">Italian Telegram</a>
+                <a rel="nofollow" href="#" target="_blank">Indian Telegram</a>
+                <a rel="nofollow" href="#" target="_blank">Korean Telegram</a>
+                <a rel="nofollow" href="#" target="_blank">Indonesian Telegram</a>
+                <a rel="nofollow" href="#" target="_blank">French Telegram</a>
+                <a rel="nofollow" href="#" target="_blank">Dutch Telegram</a>
+                <a rel="nofollow" href="#" target="_blank">Arabic Telegram</a>
+                <a rel="nofollow" href="#" target="_blank">Japanese Telegram</a>
+                <a rel="nofollow" href="#" target="_blank">German Telegram</a>
+                <a rel="nofollow" href="#" target="_blank">Portuguese Telegram</a>
+                <a rel="nofollow" href="#" target="_blank">Slovenian Telegram</a>
+                <a rel="nofollow" href="#" target="_blank">Croatian Telegram</a>
+                <a rel="nofollow" href="#" target="_blank">Bangladeshi Telegram</a>
+                <a rel="nofollow" href="#" target="_blank">Nigerian Telegram</a>
+                <a rel="nofollow" href="#" target="_blank">Thai Telegram</a>
+                <a rel="nofollow" href="#" target="_blank">Pakistani Telegram</a>
+              </div>
+            </li>
+
+            <li class="px-5 py-4">
+              <a href="https://www.instagram.com/naturesvaultofficial/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30.16" height="30.203" viewBox="0 0 30.16 30.203">
+                  <path id="Instagram" d="M18.074,33.208c-4.12,0-4.605-.022-6.213-.092A11.025,11.025,0,0,1,8.2,32.363a7.735,7.735,0,0,1-4.4-4.406,11.038,11.038,0,0,1-.7-3.662C3,22.69,3,22.164,3,18.077c0-4.131.022-4.614.094-6.213a11.036,11.036,0,0,1,.7-3.657A7.72,7.72,0,0,1,8.207,3.8a10.941,10.941,0,0,1,3.657-.7c1.6-.09,2.125-.09,6.21-.09,4.153,0,4.63.022,6.213.09a11.01,11.01,0,0,1,3.667.7,7.729,7.729,0,0,1,4.409,4.408,11.008,11.008,0,0,1,.705,3.713c.094,1.6.094,2.128.094,6.215s-.023,4.622-.094,6.208a11.057,11.057,0,0,1-.7,3.666,7.744,7.744,0,0,1-4.411,4.408,11.071,11.071,0,0,1-3.661.7C22.694,33.208,22.17,33.208,18.074,33.208ZM18.017,5.656c-4.1,0-4.522.02-6.121.092A8.355,8.355,0,0,0,9.1,6.269,5.006,5.006,0,0,0,6.222,9.136,8.4,8.4,0,0,0,5.7,11.961c-.089,1.623-.089,2.048-.089,6.116,0,4.019.015,4.506.089,6.119a8.486,8.486,0,0,0,.521,2.8A5.009,5.009,0,0,0,9.1,29.857a8.24,8.24,0,0,0,2.795.521c1.621.094,2.048.094,6.121.094,4.108,0,4.533-.02,6.119-.094a8.309,8.309,0,0,0,2.8-.521A5.024,5.024,0,0,0,29.8,27a8.445,8.445,0,0,0,.521-2.827h.018c.072-1.6.072-2.028.072-6.119s-.018-4.521-.09-6.121A8.472,8.472,0,0,0,29.8,9.136a5.024,5.024,0,0,0-2.864-2.867,8.279,8.279,0,0,0-2.8-.521C22.516,5.656,22.093,5.656,18.017,5.656Zm.057,20.156a7.742,7.742,0,1,1,7.737-7.743A7.742,7.742,0,0,1,18.074,25.812Zm0-12.771A5.024,5.024,0,1,0,23.1,18.065,5.024,5.024,0,0,0,18.074,13.041Zm8.038-1.194a1.807,1.807,0,1,1,1.281-.528A1.805,1.805,0,0,1,26.112,11.847Z" transform="translate(-3.002 -3.005)" fill="#fff"/>
+                </svg>                            
+              </a>
+            </li>
+            <li class="px-5 py-4">
+              <a href="https://www.instagram.com/naturesvaultofficial/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="33.658" height="24.025" viewBox="0 0 33.658 24.025">
+                  <g id="Layer_2" transform="translate(-3.241 -16.622)">
+                    <g id="Group_93" data-name="Group 93" transform="translate(3.241 16.622)">
+                      <g id="Group_92" data-name="Group 92" transform="translate(0)">
+                        <path id="Path_84" data-name="Path 84" d="M32.746,19.622a14.23,14.23,0,0,0-8.076-3l-.4.461a18.941,18.941,0,0,1,7.182,3.634,24.846,24.846,0,0,0-23.246,0s2.365-2.279,7.557-3.75l-.288-.346a14.294,14.294,0,0,0-8.076,3A38.078,38.078,0,0,0,3.241,36.293s2.423,4.153,8.8,4.355c0,0,1.067-1.269,1.932-2.365a9.015,9.015,0,0,1-5.047-3.375,21.358,21.358,0,0,0,7.528,2.913A20.851,20.851,0,0,0,31.42,34.908a9.145,9.145,0,0,1-5.22,3.4c.865,1.067,1.9,2.307,1.9,2.307,6.374-.2,8.8-4.355,8.8-4.326A38.084,38.084,0,0,0,32.746,19.622ZM14.691,33.611a3.066,3.066,0,0,1-2.942-3.173,2.949,2.949,0,1,1,5.884,0A3.047,3.047,0,0,1,14.691,33.611Zm10.527,0a3.066,3.066,0,0,1-2.942-3.173c.13-4.205,5.736-4.207,5.884,0A3.047,3.047,0,0,1,25.218,33.611Z" transform="translate(-3.241 -16.622)" fill="#fff"/>
+                      </g>
+                    </g>
+                  </g>
+                </svg>                
+              </a>
+            </li>
+            
+            <li class="px-5 py-4">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34.168" height="34.168" viewBox="0 0 34.168 34.168">
+                  <path id="Reddit" d="M19.084,36.168A17.084,17.084,0,1,1,36.168,19.084,17.084,17.084,0,0,1,19.084,36.168ZM10.212,16.595A2.494,2.494,0,0,0,8.5,20.905a2.448,2.448,0,0,0,.67.451,4.377,4.377,0,0,0,0,.75c0,3.827,4.467,6.94,9.958,6.94s9.96-3.113,9.96-6.94a4.738,4.738,0,0,0,0-.75,2.462,2.462,0,0,0-1.107-4.676h-.091a2.488,2.488,0,0,0-1.635.7,12.157,12.157,0,0,0-6.577-2.1l1.11-5.33,3.653.769a1.708,1.708,0,0,0,1.7,1.524,1.734,1.734,0,0,0,.186-.01,1.708,1.708,0,0,0-.171-3.408,1.747,1.747,0,0,0-.193.015,1.708,1.708,0,0,0-1.3.841l-4.182-.841a.538.538,0,0,0-.113-.012.531.531,0,0,0-.513.417l-1.278,5.933a12.169,12.169,0,0,0-6.663,2.1A2.477,2.477,0,0,0,10.212,16.595Zm9.179,10.218h-.577a6.581,6.581,0,0,1-3.929-1.321.46.46,0,0,1,.063-.649.467.467,0,0,1,.292-.1.461.461,0,0,1,.292.1,5.557,5.557,0,0,0,3.3,1.075h.554a5.582,5.582,0,0,0,3.266-1.049.479.479,0,0,1,.683,0,.485.485,0,0,1-.009.683v-.068a6.556,6.556,0,0,1-3.938,1.327Zm3.634-4.175H23l.014-.067a1.6,1.6,0,1,1,1.257-.48,1.688,1.688,0,0,1-1.186.547h-.058ZM15.1,22.5a1.708,1.708,0,1,1,1.708-1.708A1.708,1.708,0,0,1,15.1,22.5Z" transform="translate(-2 -2)" fill="#fff"/>
+                </svg>                
+              </a>
+            </li>
+
+            <li class="px-5 py-4">
+              <a href="https://www.linkedin.com/company/nature-s-vault-ltd">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26.56" height="26.56" viewBox="0 0 26.56 26.56">
+                  <path id="LinkedIn" d="M17.756,29.56h-5.9V11.853h5.9V14.8a6.814,6.814,0,0,1,5.2-2.6,6.64,6.64,0,0,1,6.6,6.659v10.7h-5.9V19.6a3.342,3.342,0,0,0-3.316-2.868A2.678,2.678,0,0,0,17.756,19.6Zm-8.853,0H3V11.853H8.9ZM5.951,8.9a2.951,2.951,0,1,1,2.087-.864A2.951,2.951,0,0,1,5.951,8.9Z" transform="translate(-3 -3)" fill="#fff"/>
+                </svg>                                         
+              </a>
+            </li>
+
+            <li class="px-5 py-4">
+              <a href="https://medium.com/@natures_vault">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32.316" height="27.366" viewBox="0 0 32.316 27.366">
+                  <path id="Medium" d="M12.767,8.649V29.823a1.289,1.289,0,0,1-.225.767.757.757,0,0,1-.658.316,1.31,1.31,0,0,1-.595-.145L2.9,26.555a1.539,1.539,0,0,1-.64-.6A1.589,1.589,0,0,1,2,25.112V4.534a1.027,1.027,0,0,1,.181-.614A.6.6,0,0,1,2.7,3.667a2.079,2.079,0,0,1,.794.271l9.215,4.621a.149.149,0,0,1,.055.09Zm1.154,1.823L23.552,26.1l-9.63-4.8Zm20.4.325V29.823a1.05,1.05,0,0,1-.252.731.877.877,0,0,1-.686.28,1.7,1.7,0,0,1-.847-.235l-7.953-3.972Zm-.055-2.166q0,.055-4.625,7.572T24.218,25L17.185,13.559l5.843-9.513a1.107,1.107,0,0,1,1.407-.4l9.756,4.873a.116.116,0,0,1,.072.108Z" transform="translate(-2.001 -3.54)" fill="#fff"/>
+                </svg>                                         
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+
+      <div class="py-8 md:py-12 border-t border-gray-300 mt-8 md:mt-12">
+        <p>© 2021 Nature’s Vault</p>
+      </div>
+
+    </div>
+
+
+    <div class="floating-links fixed bottom-10 right-8 hidden sm:block">
+      <ul>
+        <li>
+          <a href="https://discord.gg/GxTE4ScC" class="bg-white flex items-center justify-center h-[54px] w-[54px] rounded-full my-4 shadow-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35.406" height="25.273" viewBox="0 0 35.406 25.273">
+              <g id="Layer_2" transform="translate(-3.241 -16.622)">
+                <g id="Group_93" data-name="Group 93" transform="translate(3.241 16.622)">
+                  <g id="Group_92" data-name="Group 92" transform="translate(0)">
+                    <path id="Path_84" data-name="Path 84" d="M34.278,19.778a14.969,14.969,0,0,0-8.5-3.155l-.425.485a19.925,19.925,0,0,1,7.555,3.823,26.136,26.136,0,0,0-24.454,0s2.488-2.4,7.949-3.944l-.3-.364a15.036,15.036,0,0,0-8.5,3.155A40.056,40.056,0,0,0,3.241,37.314S5.79,41.683,12.495,41.9c0,0,1.123-1.335,2.033-2.488a9.483,9.483,0,0,1-5.309-3.55,22.467,22.467,0,0,0,7.919,3.064,21.933,21.933,0,0,0,15.746-3.064,9.62,9.62,0,0,1-5.492,3.58c.91,1.123,2,2.427,2,2.427,6.7-.212,9.253-4.581,9.253-4.551A40.062,40.062,0,0,0,34.278,19.778ZM15.286,34.493a3.225,3.225,0,0,1-3.095-3.337,3.1,3.1,0,1,1,6.189,0A3.205,3.205,0,0,1,15.286,34.493Zm11.074,0a3.225,3.225,0,0,1-3.095-3.337c.136-4.424,6.034-4.425,6.189,0A3.205,3.205,0,0,1,26.359,34.493Z" transform="translate(-3.241 -16.622)" fill="#8c8b8b"/>
+                  </g>
+                </g>
+              </g>
+            </svg>          
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="bg-white flex items-center justify-center h-[54px] w-[54px] rounded-full my-4 shadow-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32.813" height="32.813" viewBox="0 0 32.813 32.813">
+              <path id="Telegram" d="M34.813,18.406A16.406,16.406,0,1,1,18.406,2,16.406,16.406,0,0,1,34.813,18.406Zm-22.16-1.6c-1.651.715-3.348,1.45-4.9,2.3h0c-.81.588.267,1,1.277,1.4.161.062.319.124.469.185l.379.118c1.123.355,2.376.751,3.467.156,1.792-1.021,3.483-2.2,5.172-3.381.554-.387,1.107-.773,1.664-1.154l.088-.056c.474-.3,1.541-.991,1.146-.046-.933,1.012-1.932,1.909-2.937,2.81-.677.607-1.357,1.217-2.02,1.865-.578.466-1.178,1.4-.531,2.055,1.49,1.035,3,2.045,4.517,3.055l1.476.986a1.478,1.478,0,0,0,2.317-.9q.122-.711.245-1.422c.452-2.62.9-5.241,1.3-7.869.054-.412.116-.825.177-1.237a29.8,29.8,0,0,0,.345-3.006c-.12-1-1.346-.782-2.028-.557-3.507,1.324-6.978,2.746-10.436,4.193Q13.254,16.548,12.653,16.807Z" transform="translate(-2 -2)" fill="#8c8b8b" fill-rule="evenodd"/>
+            </svg>            
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="bg-white flex items-center justify-center h-[54px] w-[54px] rounded-full my-4 shadow-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30.888" height="30.889" viewBox="0 0 30.888 30.889">
+              <g id="Group_167" data-name="Group 167" transform="translate(-1966.556 -10055.557)">
+                <path id="Path_59" data-name="Path 59" d="M37.221,34.175h0l-8.061,8.061V19.419l8.065-8.063Z" transform="translate(1960.221 10044.201)" fill="#8c8b8b"/>
+                <path id="Path_60" data-name="Path 60" d="M34.179,40.464l0,0H11.355V17.644h8.063v14.76h14.76Z" transform="translate(1955.202 10045.975)" fill="#fff"/>
+                <path id="Path_61" data-name="Path 61" d="M12.683,18.972H18.09v14.76h14.76V39.14H12.683Zm-1.328-1.328V40.47l22.82,0,0,0V32.406H19.418V17.645Z" transform="translate(1955.201 10045.975)" fill="#8c8b8b"/>
+                <path id="Path_62" data-name="Path 62" d="M34.179,19.418H11.355l8.061-8.062H42.242Z" transform="translate(1955.202 10044.201)" fill="#8c8b8b"/>
+                <path id="Path_63" data-name="Path 63" d="M18.092,18.981H12.7l-1.345-1.337h8.063Z" transform="translate(1955.201 10045.975)" fill="#8c8b8b"/>
+                <path id="Path_64" data-name="Path 64" d="M28.116,35.9V30.5l1.337-1.345v8.063Z" transform="translate(1959.927 10049.221)" fill="#8c8b8b"/>
+                <path id="Path_65" data-name="Path 65" d="M12.683,34.413H32.851l1.328,1.324H11.355Z" transform="translate(1955.201 10050.702)" fill="#8c8b8b"/>
+                <path id="Path_66" data-name="Path 66" d="M31.369,30.482l-14.76.005,1.326-1.328H32.7Z" transform="translate(1956.683 10049.221)" fill="#8c8b8b"/>
+              </g>
+            </svg>            
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+
+  </footer>
+
+  
+
+  <!-- Scripts -->
+  <script src="./js/aos.js"></script>
+  <script src="./js/main.js"></script>
+
+</body>
+</html>
+
